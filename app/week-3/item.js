@@ -4,7 +4,7 @@ export default function Item({ name, category, quantity }) {
             <div>
                 <h2 className="text-lg font-semibold text-gray-900">{name}</h2>
                 <p className="text-sm text-gray-600">Category: {category}</p>
-                <p className="text-sm bg-blue-100 px-3 py-1 font-medium">Quantity: {quantity}</p>
+                <p className="text-sm text-gray-600">Quantity: {quantity}</p>
             </div>
         </li>
     );
