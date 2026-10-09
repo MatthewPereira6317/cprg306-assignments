@@ -22,11 +22,7 @@ export default function NewItem() {
      const handleSubmit = (event) => {
         event.preventDefault();
 
-        const newItem = {
-            name: name,
-            quantity: quantity,
-            category: category
-        }
+        const newItem = {name, quantity, category};
         console.log(newItem);
         alert(`Item added: ${name}, Quantity: ${quantity}, Category: ${category}`);
         setName("");
@@ -36,14 +32,14 @@ export default function NewItem() {
 
     return (
         <div className="flex flex-col items-center justify-center">
-            <h2 className="mb-4 text-xl font-bold">Quantity: {quantity}</h2>
+            <h2 className="mb-4 text-xl font-bold text-black">Quantity: {quantity}</h2>
             <div>
                 <input
                 type="text"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
-                className="border border-gray-400 rounded py-2 px-4 mb-4"
+                className="border border-gray-400 rounded py-2 px-4 mb-4 text-black"
             />
             </div>
             <div>
@@ -51,16 +47,14 @@ export default function NewItem() {
                 type="button"
                 onClick={increment}
                 disabled={quantity === 20}
-                className="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+                className="bg-green-500 hover:bg-green-700 text-white font-bold w-10 text-center py-2 px-4 rounded">
                     +
                 </button>
-            </div>
-            <div>
                 <button
                 type="button"
                 onClick={decrement}
                 disabled={quantity === 1}
-                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded">
+                className="bg-red-500 hover:bg-red-700 text-white font-bold w-10 text-center py-2 px-4 rounded mb-4">
                     -
                 </button>
             </div>
@@ -68,7 +62,7 @@ export default function NewItem() {
                 <select
                 value={category}
                 onChange={(e) => setCategory(e.target.value)}
-                className="border border-gray-400 rounded py-2 px-4 mb-4"
+                className="border border-gray-400 rounded py-2 px-4 mb-4 text-black"
                 >
                     <option value="Produce">Produce</option>
                     <option value="Dairy">Dairy</option>
