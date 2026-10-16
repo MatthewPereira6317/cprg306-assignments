@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
+    <main className="min-h-screen bg-[#ddf6fe] p-8 text-black">
       <div>
         <h1>CPRG 306: Web Development 2 - Assignments</h1>
         <ul>
@@ -17,6 +17,9 @@ export default function Home() {
           </li>
           <li>
             <Link href="/week-5">Week 5 Assignment</Link>
+          </li>
+          <li>
+            <Link href="/week-6">Week 6 Assignment</Link>
           </li>
         </ul>
       </div>

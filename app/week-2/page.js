@@ -2,7 +2,7 @@ import StudentInfo from "./student-info";
 
 export default function Page() { 
   return ( 
-    <main> 
+    <main className="min-h-screen bg-[#ddf6fe] p-8 text-black">
       <h1>Shopping List</h1> 
       <StudentInfo name="Matthew Pereira" link="https://github.com/MatthewPereira6317/cprg306-assignments.git" /> 
     </main> 
