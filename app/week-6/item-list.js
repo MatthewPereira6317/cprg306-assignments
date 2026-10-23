@@ -33,14 +33,22 @@ export default function SortBy() {
             </div>
             <ul className="space-y-4">
                 {sortBy !== "group" && sortedItems.map((item, index) => (
-                    <Item key={index} name={item.name} category={item.category} quantity={item.quantity} />
+                    <Item
+                    key={index}
+                    name={item.name}
+                    category={item.category}
+                    quantity={item.quantity} />
                 ))}
                 {sortBy === "group" && Object.entries(groupedItems).map(([category, items]) => (
                     <div key={category}>
                         <h2 className="text-xl font-semibold text-gray-900">{category}</h2>
                         <ul className="space-y-2">
                             {items.map((item, index) => (
-                                <Item key={index} name={item.name} category={item.category} quantity={item.quantity} />
+                                <Item
+                                key={index}
+                                name={item.name}
+                                category={item.category}
+                                quantity={item.quantity} />
                             ))}
                         </ul>
                     </div>
